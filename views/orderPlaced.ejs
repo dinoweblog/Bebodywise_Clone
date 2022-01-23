@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font icon link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link
+      href="//db.onlinewebfonts.com/c/2090551770be22b09600a40b0b4673b7?family=Avenir+Medium"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- main style css link -->
+    <link rel="stylesheet" href="/css/orderPlaced.css"/>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/menuPro.css" />
+    
+
+    <title>Order Placed</title>
+  </head>
+  <body>
+    <div id="body-container">
+      <div id="main-container"><%- include("common/header") %></div>
+    </div>
+
+   <div style="padding-top: 55px; padding-bottom: 100px;">
+        <div id="div_1">
+        <h2 id="order_placed_heading">Order Placed</h2>
+        <div id="box_1">
+            <p id="hi_text">Hi
+            <p id="cust_name">Yarasi</p>
+            </p>
+            <p id="thankyou_text">Thank you for placing an order with
+                Bodywise.</p>
+            <div id="cart_text">
+                <!-- <p id="cart_text">Pay Rs. -->
+                    <% var cart_total_price =  items.reduce((a,b)=>{ %>
+                        <% return a + Number(b.price) %>
+                     <% }, 0) %>
+                <p id="cart_total_price">Pay Rs.  <%= cart_total_price %>   on Delivery.
+                Cashback will be credited to your
+                BW Purse once order is delivered. </p>
+            </div>
+        </div>
+    </div>
+
+
+       <!-- Expected Delivery Data div is below -->
+
+       <div id="delivery_div">
+           <% var date = new Date().getDate() %>
+           <% var order_date = date + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear() %>
+           <% var delivery_date = ( date + 3 ) + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear() %>
+        <p class="delivery" id="delivery_1">Expected Delivery Date :
+        <p class="delivery" id="delivery_2"> <%= order_date %> </p>
+        <p class="delivery" id="delivery_3">-</p>
+        <p class="delivery" id="delivery_4"> <%= delivery_date %> </p>
+        </p>
+    </div>
+
+
+
+     <!-- the below div is for delivery address and cart details -->
+
+    <div id="delivery_cart_div">
+
+        <!-- address Bar div -->
+
+        <div id="address_div">
+            <p id="address">Shipping Details   &#8681;</p>
+            <div id="address_hide">
+                <p id="address_hide_date">Expected Delivery Data : <%= delivery_date %> </p>
+                <p id="address_hide_deliveryTo">Delivery To : </p>
+                <p id="address_hide_custName">Ashokvardhana Reddy</p>
+                <p id="address_hide_cityName">Ongole, Prakasam District</p>
+                <p id="address_hide_state">Andhra Pradesh - 523001</p>
+                <p id="address_hide_contactNo"> Contact No : 9876543210</p>
+                <hr id="address_hide_line">
+                <p id="address_hide_change">Want to change shipping details ?</p>
+                <p id="address_hide_email">Email</p>
+            </div>
+        </div>
+
+        <!-- cart ordered details div  -->
+
+        <div id="cart_div">
+            <% var random = Math.round(Math.random() * 99999) %>
+            <div id="cart_details">
+                <p id="order_id">ORDER DETAILS : # <%= random %> </p>
+                <p id="confirm_tag">CONFIRMED</p>
+                
+                <% items.forEach((item =>{ %>
+                   <div id="imageDiv">
+                       <img id="cart_image" src="<%= item.imageUrl %>">
+                   </div>
+                   <div id="textDiv">
+                       <p id="cart_product_name"><%= item.productName %></p>
+                       <p id="cart_quantity">Quantity : 1</p>
+                       <p id="cart_product_price">Rs. <%= item.price %></p>
+                   </div>
+                <% })) %>
+                <p id="order_receipt">RECEIPT</p>
+                <% var cart_total =  items.reduce((a,b)=>{ %>
+                  <% return a + Number(b.price) %>
+               <% }, 0) %>
+
+                <p id="subtotal">Sub Total</p>
+                <p id="subtotal_price"> <%= cart_total %> </p>
+                <p id="discount">Discount</p>
+                <p id="discount_total">-RS. 0</p>
+                <p id="shipping">Shipping</p>
+                <p id="shipping_total">FREE</p>
+                <hr id="break_line">
+                <p id="finalTotal">Total : </p>
+                <p id="final_total">Rs. <%= cart_total %> </p>
+
+            </div>
+            <a href="http://localhost:3000/bebodywise/home">
+              <div id="continue_shopping">CONTINUE SHOPPING</div>
+            </a>
+        </div>
+
+    </div>
+   </div>
+
+<div id=""><%- include("common/signinLogin") %></div>
+    <div id=""><%- include("common/searchSection") %></div>
+    <div id="cartSliderDiv"><%- include("common/cartSlider") %></div>
+    <div id="footerDiv"><%- include("common/footer") %></div>
+  </body>
+
+   <script src="/js/script.js"></script>
+  <script src="/js/slider.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/menu.js"></script>
+  <script type="module" src="/js/orderPlaced.js"></script>
+
+</html>

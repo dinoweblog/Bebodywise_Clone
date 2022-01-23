@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font icon link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link
+      href="//db.onlinewebfonts.com/c/2090551770be22b09600a40b0b4673b7?family=Avenir+Medium"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- main style css link -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/menuPro.css" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="body-container">
+      <div id="main-container"><%- include("common/header") %></div>
+    </div>
+
+    <!-- Bodywise section -->
+    <div id="bodyPart">
+      <div id="bodyLeft">
+        <div>
+          <span>Be Bodywise</span>
+          <p>
+            The wisdom to stop the experiments and get health & wellness
+            solutions from experts
+          </p>
+        </div>
+        <div id="womanImg">
+          <div>
+            <p>Begin your journey with a Free Doctor or Nutritionist Consult</p>
+            <button>Book Now</button>
+          </div>
+          <div id="womanShow">
+            <img
+              src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1618984052/new%20home/Doc.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div id="bodyRight">
+        <div>
+          <img
+            src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1618391146/new%20home/image_24_3.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_180,c_limit/v1617890609/staging/New%20category%20page%20banner/hair_1.png"
+              alt=""
+            />
+          </div>
+          <div style="margin-top: 10px">
+            <img
+              src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_180,c_limit/v1617890609/staging/New%20category%20page%20banner/weight.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="topCard">
+      <div>
+        <img
+          src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1623302237/new%20home/Hair_Desktop_new.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1623302237/new%20home/Skin_Desktop_new.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1636470038/new%20home/Nutrition_Desktop_new.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1634886012/new%20home/UPDATED_PCOS/PCOS_Desktop_N2.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1623302237/new%20home/UTI_Desktop_new.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Best Sellers Section menu  Menu Product-->
+
+    <div id="menuPro">
+      <div class="menuBtnDiv">
+        <h1>Best Sellers</h1>
+        <h2>Browse our best sellers by type of your concerns</h2>
+        <ul id="myBtn">
+          <li class="fff">
+            <div id="mBtn1" onclick="firstShow()">Hair</div>
+            <span><i class="fas fa-caret-down down1"></i></span>
+          </li>
+          <li>
+            <div id="mBtn2" onclick="skinFun()">Skin</div>
+            <span><i class="fas fa-caret-down down2"></i></span>
+          </li>
+          <li>
+            <div onclick="nutritionFun()" id="mBtn3">Nutrition</div>
+            <span><i class="fas fa-caret-down down3"></i></span>
+          </li>
+          <li>
+            <div onclick="pcosFun()" id="mBtn4">PCOS</div>
+            <span><i class="fas fa-caret-down down4"></i></span>
+          </li>
+          <li>
+            <div onclick="feminineCareFun()" id="mBtn5">UTI</div>
+            <span><i class="fas fa-caret-down down5"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <% function fun(e){ %> <%- include("menuProduct/menuProduct", {cate: e}) %>
+    <%} %> -->
+
+    <div id="hair">
+      <%- include("menuProduct/menuProduct", {cate: "hair"}) %>
+    </div>
+    <div id="skin">
+      <%- include("menuProduct/menuProduct", {cate: "skin"}) %>
+    </div>
+    <div id="weight">
+      <%- include("menuProduct/menuProduct", {cate: "weight"}) %>
+    </div>
+    <div id="pcos">
+      <%- include("menuProduct/menuProduct", {cate: "pcos"}) %>
+    </div>
+    <div id="feminineCare">
+      <%- include("menuProduct/menuProduct", {cate: "feminineCare"}) %>
+    </div>
+    <!-- End  Menu Product -->
+
+    <!-- Feeling confused -->
+    <div id="feeling">
+      <div id="underFeel">
+        <div>
+          <img
+            src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto/v1611455725/Bodywise/Random/Rectangle_94.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <h1>Feeling confused?</h1>
+          <p>Take a quick assessment co-created with our expert doctors</p>
+          <button>Consult Doctor Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- how it works -->
+    <div id="mainWork">
+      <p style="font-size: 36px">How it works?</p>
+      <div id="workDiv">
+        <div>
+          <span>01</span>
+          <h4>Health Assessment</h4>
+          <p>
+            Let us get to know you by asking a few questions. We will lay out
+            actionable steps for you to achieve your wellness goals.
+          </p>
+        </div>
+        <div>
+          <span>02</span>
+          <h4>Online Doctor Consultation</h4>
+          <p>
+            Get connected with a doctor to discuss your health concerns and
+            understand the treatment options. Find products that are right for
+            your needs.
+          </p>
+        </div>
+        <div>
+          <span>03</span>
+          <h4>Instant Product Delivery</h4>
+          <p>
+            We know you’re busy. We will get your treatment shipped to your door
+            in 3-5 days.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hair section ---------- -->
+
+    <section class="proSection">
+      <div id="hairHead">
+        <div>
+          <h2 style="font-size: 50px">Hair</h2>
+          <p style="font-size: 24px; color: hsla(0, 0%, 100%, 0.7)">
+            Discover trichologist developed solutions that help address your
+            hair fall concerns and support further hair growth.
+          </p>
+          <button class="clasicBtn">
+            View All
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 20px; color: white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider hair section --------------- -->
+
+      <div><%- include("sliders/hairSlider") %></div>
+
+      <!-- What to expect? -->
+      <div class="expect">
+        <p>What to expect?</p>
+        <div class="subExpect">
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>1-2 months</span>
+              <p>
+                There will likely be no visible change in the first two months.
+                Some people may shed slightly more hair strands than before.
+                This is temporary and absolutely normal.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>3-6 months</span>
+              <p>
+                At this point, it may become noticeable that hair loss has
+                slowed, stopped, or in some cases maybe even reversed. Take a
+                photo to track your progress.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>After 6+ months</span>
+              <p>
+                By now, hair loss may have considerably slowed down or stopped,
+                and some people may see signs of regrowth (usually at the crown
+                of the head). Consistent daily treatment is required to maintain
+                results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Skin Section ----------------- -->
+
+    <!-- Hair section ---------- -->
+
+    <section class="proSection">
+      <div id="skinHead">
+        <div>
+          <h2 style="font-size: 50px">Skin</h2>
+          <p style="font-size: 24px; color: hsla(0, 0%, 100%, 0.7)">
+            Get clear, youthful looking skin with our dermatologist developed
+            solutions for your acne and aging concerns.
+          </p>
+          <button class="clasicBtn">
+            View All
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 20px; color: white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider skin section --------------- -->
+
+      <div><%- include("sliders/skinSlider") %></div>
+
+      <!-- What to expect? -->
+      <div class="expect expectSkin">
+        <p>What to expect?</p>
+        <div class="subExpect">
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>1-2 months</span>
+              <p>
+                There will likely be very few visible change in the first two
+                months. Acne scars and hyperpigmentation may reduce and your
+                skin texture will start improving.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>3-6 months</span>
+              <p>
+                At this point, it may become noticeable that skin has started
+                new skin cell production and there will be reduction in fine
+                lines & wrinkles, number of pimples on your face.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>After 6+ months</span>
+              <p>
+                By now, your skin may have healed completely. Aging signs and
+                acne may have considerably slowed down or stopped, and some
+                people may see a natural glow on their face. Consistent daily
+                treatment is required to maintain results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End skin section ---------------- -->
+
+    <!-- Nutrition Section ------------------ -->
+
+    <section class="proSection">
+      <div id="nutritionHead">
+        <div>
+          <h2 style="font-size: 50px">Nutrition</h2>
+          <p style="font-size: 24px; color: hsla(0, 0%, 100%, 0.7)">
+            Achieve your body goals with our nutritionist developed supplemental
+            solutions to aid your weight management journey - while maintaining
+            a healthy lifestyle.
+          </p>
+          <button class="clasicBtn">
+            View All
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 20px; color: white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider nutrition section --------------- -->
+
+      <div><%- include("sliders/nutritionSlider") %></div>
+
+      <!-- What to expect? -->
+      <div class="expect expectNut">
+        <p>What to expect?</p>
+        <div class="subExpect">
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>1-2 months</span>
+              <p>
+                There will likely be very few visible change in the first two
+                months. Your appetite may have reduced.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>3-6 months</span>
+              <p>
+                At this point, it may become noticeable that body feels lighter.
+                There may be reduction in acid reflux, bloating etc. Take a
+                photo to track your progress.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>After 6+ months</span>
+              <p>
+                By now, your appetite may have reduced while your eating habits
+                may have changed as well. Consistent daily treatment is required
+                to maintain results and increase the chance of maintaining your
+                weight.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End nutrition section --------------- -->
+
+    <!-- PCOS section ------------- -->
+
+    <section class="proSection">
+      <div id="pcosHead">
+        <div>
+          <h2 style="font-size: 50px">PCOS</h2>
+          <p style="font-size: 24px; color: hsla(0, 0%, 100%, 0.7)">
+            Restore hormonal imbalance and manage bloating, period cramps,
+            stress and more with our period management range.
+          </p>
+          <button class="clasicBtn">
+            View All
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 20px; color: white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider PCOS section --------------- -->
+
+      <div><%- include("sliders/pcosSlider") %></div>
+
+      <!-- What to expect? -->
+      <div class="expectPcos">
+        <p>What to expect?</p>
+        <div class="subExpect">
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>3-6 months</span>
+              <p>
+                At this point, it may become noticeable that your stress and
+                anxiety levels have reduced. Some people may notice an
+                improvement in energy level & digestion. Your body may feel
+                lighter; you’re able to manage your weight better.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>After 6+ months</span>
+              <p>
+                By now, your hormonal imbalance may have reduced. Your periods
+                are more regular than before. Consistent daily treatment is
+                required to maintain results and manage PCOS symptoms and period
+                cramps .
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feminine Care Section -------------------->
+    <section class="proSection">
+      <div id="careHead">
+        <div>
+          <h2 style="font-size: 50px">Feminine Care</h2>
+          <p style="font-size: 24px; color: hsla(0, 0%, 100%, 0.7)">
+            Manage intimate hygiene, reduce UTI recurrence and improve gut
+            health with our intimate care product range.
+          </p>
+          <button class="clasicBtn">
+            View All
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 20px; color: white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider Feminine Care section --------------- -->
+      <div><%- include("sliders/feminineCareSlider") %></div>
+
+      <!-- What to expect? -->
+      <div class="expectCare">
+        <p>What to expect?</p>
+        <div class="subExpect">
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>3-6 months</span>
+              <p>
+                At this point, it may become noticeable, the recurrence of UTI
+                is reduced. The UTI causing bacteria is prevented from sticking
+                to the walls of the urinary tract reducing the likelihood of
+                infection. The intimate area skin is moisturized and limits
+                further chaffing, excessive sweating reducing the likelihood of
+                bacterial infections.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="circle"></div>
+            <div class="circleImg">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1625127372/staging/Home/Images/Calendar.png"
+                alt=""
+              />
+            </div>
+            <div class="expextInfo">
+              <span>After 6+ months</span>
+              <p>
+                By now, you may notice an improvement in gut health. This aids
+                the growth of good bacteria & helps prevent UTIs by keeping bad
+                bacteria from growing in the urinary tract.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Feminine Care Section ----------------->
+
+    <!-- You matter to us ----------- -->
+    <div class="matter">
+      <p style="color: rgb(14, 14, 14); font-size: 36px; margin-bottom: 15px">
+        You matter to us
+      </p>
+      <p style="width: 70%">
+        Bodywise believes that your health and wellness should be in your
+        control. With the right guidance, you can conquer the chaos, on your
+        terms.
+      </p>
+    </div>
+
+    <div id="matterSlider">
+      <div class="matterOuterDiv">
+        <div class="matterSliderDiv">
+          <div class="sliderMatter">
+            <div class="matterImgP">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1605619624/staging/Home/bodywise-values/Doctor-developed.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p>Doctor developed science-based solutions</p>
+              </div>
+            </div>
+            <div class="matterImgP">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1605619624/staging/Home/bodywise-values/Personalised-regime.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p>Tailormade regimes to suit you perfectly</p>
+              </div>
+            </div>
+            <div class="matterImgP">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1605619624/staging/Home/bodywise-values/Digital-health-clinic.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p>
+                  Extended care & treatment with a team of specialists,
+                  qualified doctors
+                </p>
+              </div>
+            </div>
+            <div class="matterImgP">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_150,c_limit/v1605619624/staging/Home/bodywise-values/transparency-.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p>We are driven by care and committed to transparency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gradient"></div>
+
+        <button class="nextPreIcon" href="#" id="prevMatter">
+          <i
+            class="fa fa-chevron-left"
+            style="color: black; font-size: 15px"
+          ></i>
+        </button>
+        <button class="nextPreIcon" href="#" id="nextMatter">
+          <i
+            class="fa fa-chevron-right"
+            style="color: black; font-size: 15px"
+          ></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Meet Our Experts ------ -->
+    <div id="meet">
+      <div class="meetOuterDiv">
+        <h2 style="margin-bottom: 40px; margin-left: 40px; font-size: 36px">
+          Meet Our Experts
+        </h2>
+        <div class="meetSliderDiv">
+          <div class="sliderMeet">
+            <div class="experts">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_400,c_limit/v1604583668/staging/Home/Images/Rectangle_56.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h4>Dr. Sharmatha Kumar</h4>
+                <p>
+                  Dr. Kumar is a practicing dermatologist with a decade of
+                  experience treating women. She specializes in aesthetic
+                  dermatology and hair restoration. She is a passionate advocate
+                  for safe and effective skin & hair care.
+                </p>
+              </div>
+            </div>
+
+            <div class="experts">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1621261618/Dr_Poonam_Mishra1.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h4>Dr. Poonam Mishra</h4>
+                <p>
+                  Dr. Mishra is an obstetrician and gynecologist with a keen
+                  focus on Infertility and high-risk pregnancy. She is a teacher
+                  and awareness generator, involved in different programs as
+                  Anemia Prevention, Adolescent health, Say no to NTDs, and No
+                  more leaks.
+                </p>
+              </div>
+            </div>
+
+            <div class="experts">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_400,c_limit/v1604583668/staging/Home/Images/Rectangle_56-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h4>Dr. Supriya Vatkar</h4>
+                <p>
+                  Dr. Vatkar is a dermatologist and an esteemed fellow of
+                  several Indian and international institutes. She specializes
+                  in cutting edge technologies focused on Indian skin. She is a
+                  strong advocate of cruelty free products.
+                </p>
+              </div>
+            </div>
+
+            <div class="experts">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_400,c_limit/v1604583668/staging/Home/Images/Rectangle_56-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h4>Dr. Shobita Anand</h4>
+                <p>
+                  Dr. Anand is a practicing cosmetologist who deals with skin
+                  and hair conditions specifically focusing on conditions that
+                  affect women of a younger age. Her interest in these cases is
+                  deep rooted in her personal experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gradient"></div>
+
+        <button class="nextPreIcon" href="#" id="prevMeet">
+          <i
+            class="fa fa-chevron-left"
+            style="color: black; font-size: 15px"
+          ></i>
+        </button>
+        <button class="nextPreIcon" href="#" id="nextMeet">
+          <i
+            class="fa fa-chevron-right"
+            style="color: black; font-size: 15px"
+          ></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Review section ================================== -->
+
+    <div id=""><%- include("sliders/reviewSlider") %></div>
+
+    <!-- End Review section ================================== -->
+
+    <!-- Result slider section ================================== -->
+
+    <div id=""><%- include("sliders/resultSlider") %></div>
+
+    <!-- End  Result slider section ================================== -->
+
+    <!-- Blog section ================================== -->
+
+    <div id=""><%- include("sliders/blogSlider") %></div>
+
+    <!-- End Blog section ================================== -->
+
+    <div class="refers-earn">
+      <div class="one">
+        <div class="refers-earn-inside">
+          <div class="row">
+            <div class="col-md-4 col-6 order-md-1 order-2">
+              <img
+              src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1602666576/referral-snippet/referralSnippetDesktop.svg"
+              alt"">
+            </div>
+            <div class="col-md-8 col-6 order-md-2 order-1">
+              <div class="refers-earn-info-button">
+                <span>Refer & Earn</span>
+                <h4>Refer your friends to Bodywise and get rewarded</h4>
+                <button id="refer" style="display: inline-block">
+                  Refer Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery-instruction">
+      <div class="two">
+        <div class="delivery-instruction-title">
+          <h2>Delivery Instructions</h2>
+        </div>
+        <div class="delivery-instruction-inner">
+          <div
+            class="delivery-instruction-card-1"
+            style="
+              margin-right: 2vw;
+              background-color: rgba(55, 159, 142, 0.12);
+            "
+          >
+            <div class="delivery-instruction-icon">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1603435297/staging/Home/Images/cod-icn.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <h4>COD Available</h4>
+              <p>Free shipping all over India</p>
+            </div>
+          </div>
+          <div
+            class="delivery-instruction-card-1"
+            style="background-color: rgba(232, 102, 104, 0.12)"
+          >
+            <div class="delivery-instruction-icon">
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1603435297/staging/Home/Images/coupon-icn.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <h4>20% Cashback</h4>
+              <p>When you place an order and pay online</p>
+            </div>
+          </div>
+        </div>
+        <div class="delivery-instruction-bottom">
+          <h3>Complete your payment using any of these payment options</h3>
+          <ul>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/amex-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/master-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/visa-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/bhim-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/gpay-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/netbanking-icn.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_200,c_limit/v1603435295/staging/Home/Images/cash-icn.png"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id=""><%- include("common/signinLogin") %></div>
+    <div id=""><%- include("common/searchSection") %></div>
+    <div id=""><%- include("common/cartSlider") %></div>
+    <div id="footerDiv"><%- include("common/footer") %></div>
+  </body>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/slider.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/menu.js"></script>
+
+  <script>
+    // const starTotal = 5;
+    // function ratingFun(items) {
+    //   let item = JSON.parse(items);
+    //   let rating = item.rating;
+    //   // 2
+    //   const starPercentage = (rating / starTotal) * 100;
+    //   console.log(starPercentage);
+    //   // 3
+    //   const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+    //   // 4
+    //   document.querySelector(".stars-inner").style.width =
+    //     starPercentageRounded;
+    //   console.log(d);
+    // }
+  </script>
+</html>

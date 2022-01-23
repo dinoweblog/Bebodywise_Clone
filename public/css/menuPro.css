@@ -1,0 +1,65 @@
+#menuPro {
+  width: 80%;
+  margin: auto;
+  margin-top: 11vw;
+}
+
+#menuPro .menuBtnDiv ul li {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  width: calc(20% - 15px);
+  cursor: pointer;
+}
+
+#menuPro .menuBtnDiv ul li div {
+  width: 100%;
+  padding: 13px 0 13px 0;
+  border-radius: 12px;
+}
+
+#menuPro .menuBtnDiv ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4vw;
+}
+
+.menuBtnDiv ul li i {
+  font-size: 2.5vw;
+  /* color: white; */
+  margin-top: -5px;
+}
+.menuBtnDiv h1 {
+  font-size: 3vw;
+  font-weight: 300;
+}
+
+.menuBtnDiv h2 {
+  font-size: 1.7vw;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 300;
+}
+.menuProDiv .outerDiv {
+  margin-top: 2.5vw;
+}
+
+/* #mBtn1 {
+  background-color: rgb(103, 86, 128);
+  color: rgb(255, 255, 255);
+} */
+.active {
+  background-color: rgba(103, 86, 128, 0.1);
+  color: rgb(102, 80, 154);
+}
+
+.fa-caret-down {
+  color: white;
+}
