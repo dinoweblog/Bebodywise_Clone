@@ -1,0 +1,37 @@
+<div class="sliderBlogSection">
+  <div class="outerDiv">
+    <p style="font-size: 2.6vw !important; margin: 0 0 3vw 35px">
+      Customer Reviews
+    </p>
+    <div class="retingSliderDiv">
+      <div id="retings">
+        <% review.forEach(items =>{ %>
+        <div id="cardDiv">
+          <div id="topImsAndName">
+            <img src="<%= items.imageUrl %>" alt="" />
+            <h5><%= items.product_name %></h5>
+          </div>
+          <div class="content">
+            <h1><%= items.retings %></h1>
+            <h4><%= items.title %></h4>
+            <p><%= items.content %></p>
+          </div>
+          <div>
+            <p style="margin-bottom: 10px; color: black; padding: 0 1vw 1vw 1vw">
+              <%= items.name %>`, Age <%= items.age %>`
+            </p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <div class="gradient"></div>
+
+    <button class="nextPreIcon" id="prevReting" href="#">
+      <i class="fa fa-chevron-left" style="color: black; font-size: 15px"></i>
+    </button>
+    <button class="nextPreIcon" id="nextReting" href="#">
+      <i class="fa fa-chevron-right" style="color: black; font-size: 15px"></i>
+    </button>
+  </div>
+</div>

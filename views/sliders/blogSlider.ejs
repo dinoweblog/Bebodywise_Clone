@@ -1,0 +1,33 @@
+<div class="sliderBlogSection">
+  <div class="outerDiv">
+    <p style="font-size: 36px !important; margin: 0 0 3vw 35px">
+      Be Bodywise Health
+    </p>
+    <div class="blogSliderDiv">
+      <div class="blog">
+        <% blog.forEach(items =>{ %>
+        <div id="cardDiv">
+          <div>
+            <div><img src="<%= items.imageUrl %>" alt="" /></div>
+          </div>
+          <div class="content">
+            <h6><%= items.title %></h6>
+            <p><%= items.content %></p>
+          </div>
+          <div>
+            <button id="LearnMoreBtn">Learn More</button>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <div class="gradient"></div>
+
+    <button class="nextPreIcon" id="prevBlog" href="#">
+      <i class="fa fa-chevron-left" style="color: black; font-size: 15px"></i>
+    </button>
+    <button class="nextPreIcon" id="nextBlog" href="#">
+      <i class="fa fa-chevron-right" style="color: black; font-size: 15px"></i>
+    </button>
+  </div>
+</div>

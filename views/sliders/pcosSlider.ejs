@@ -1,0 +1,39 @@
+<div class="sliderSection">
+  <div class="outerDiv">
+    <div class="sliderDiv">
+      <div class="sliderPcos">
+        <% count = 0%> <% products.forEach(items =>{ %> <% if(items.category ===
+        "pcos" && (count <= 8)){%>
+        <div id="cardDiv">
+          <div><a href="/bebodywise/productDetails/<%= items._id %>"
+              ><img src="<%= items.imageUrl %>" alt=""
+            /></a></div>
+          <div class="textDiv">
+            <p class="productName"><%= items.productName %></p>
+            <div class="priceDiv">
+              <p class="price">
+                <span class="material-icons">currency_rupee</span><%=
+                items.price %>
+              </p>
+              <p class="mrp">
+                <span class="material-icons">currency_rupee</span><%= items.mrp
+                %>
+              </p>
+            </div>
+            <p><span>For </span> <%= items.productUses %></p>
+            <p class="withDiv"><span>With </span><%= items.productMade %></p>
+          </div>
+          <button onclick="addToCart(`<%= JSON.stringify(items) %>`)" id="addToCartBtn">Add to Cart</button>
+        </div>
+        <% count++ %> <%}%> <% }) %>
+      </div>
+    </div>
+    <div class="gradient"></div>
+    <button class="nextPreIcon " id="prevPcos" href="#">
+      <i class="fa fa-chevron-left" style="color: black; font-size: 15px"></i>
+    </button>
+    <button class="nextPreIcon " id="nextPcos" href="#">
+      <i class="fa fa-chevron-right" style="color: black; font-size: 15px"></i>
+    </button>
+  </div>
+</div>
