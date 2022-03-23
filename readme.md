@@ -58,57 +58,53 @@ First, you have to go to the `Home Page`. There you have to click on the account
 
 ---
 
-- **Home Page**
-    
-    ![body.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/body.png)
-    
-    ![Screenshot 2022-01-23 200153.png](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/Screenshot_2022-01-23_200153.png)
-    
+# Home Page
+Here you can find brief history of the products and website
 
+ ![body PNG (1)](https://user-images.githubusercontent.com/93374756/159763471-1a31cd31-38ad-49c5-9235-a4d7d5ebb0e3.png)
+
+
+
+
+
+
+
+
+
+
+
+# Add to Cart
+In this Page, You can add the products to the Cart
+
+![c PNG (1)](https://user-images.githubusercontent.com/93374756/159763466-d026eb65-c1b3-4e69-9759-64c3bcfa65f1.png)
+
+
+# Sign-Up Page
+if you want buy any product you need sign up first and login with details then only you can buy
+
+![acc PNG](https://user-images.githubusercontent.com/93374756/159763461-b3e92d91-bd46-45b3-82a3-d012dff121fc.png)
+
+
+
+# Products Page
+In this page, you can find all details of the product like price of the product, Ratings given by the customer to each product, how products sold , How to use the product and how the product made
+
+![Screenshot 2022-01-23 200153](https://user-images.githubusercontent.com/93374756/159763468-79c0e9aa-639b-4965-b8fb-eaa110dceee0.png)
+
+
+ # Payment Page
+In this page, If you want to purchase the product, you need fill some details regarding card details and here you also find how the discount you get, how much you need to pay and address
+
+![h PNG](https://user-images.githubusercontent.com/93374756/159763454-44619bac-aa5c-4f03-8b22-8fc690629567.png)
+
+
+
+
+# Order Summary
+After purchase the product,  it will show the order details like how much you paid and when product will deliver.
+
+![Screenshot 2022-01-23 200937](https://user-images.githubusercontent.com/93374756/159763456-60aab81f-c463-4661-815e-036a0ad460ee.png)
+
+[Project Deploy Link](https://dinoweblog.github.io/FW13-T48-BebodywiseClone-Project/)
 ---
 
-- Add to Cart
-
----
-
-![c.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/c.png)
-
----
-
-- **Sign-Up Page**
-
----
-
-![acc.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/acc.png)
-
----
-
-- **Products Page**
-
----
-
-![ggg.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/ggg.png)
-
----
-
-- **Single Product Details**
-
----
-
-![oii.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/oii.png)
-
----
-
-- **Payment Page**
-
----
-
-![h.PNG](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/h.png)
-
----
-
-- **Order Summary**
-
----
-
-![Screenshot 2022-01-23 200937.png](Bebodywise%20Clone%20Project%20(FW13-T48)%208c69fef0239447768efaef4119905890/Screenshot_2022-01-23_200937.png)
